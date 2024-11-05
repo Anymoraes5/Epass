@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    background-color: #0097b8;
+    height: 90px;
+}
+#imagem{
+    height: 63.5px;
+    width: 250px;
+    position: absolute;
+    top: 10px;
+}
+.container{
+    display: grid; /* Ativa o modelo grid */
+    grid-template-columns: repeat(1fr, 2fr); /* Cria 2 colunas esquerda mais estreita e outra mais larga */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px;
+
+}
+/* Estilo da lista na faixa esquerda */
+.list-container {
+    border-right: 2px solid #ccc;
+}
+
+.list-item {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.list-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo da área de detalhes na faixa direita */
+.details {
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: none; /* Inicialmente oculto */
+}
+
+.details.active {
+    display: block; /* Exibe o conteúdo ao clicar */
+}

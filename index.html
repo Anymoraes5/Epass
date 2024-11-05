@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-PASS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/Black_And_White_Modern_Vintage_Retro_Brand_Logo__1_-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img id="imagem" src="images/2-removebg-preview.png" alt="" width="150">
+        </div>
+        <div class="navegation">
+
+        </div>
+    </header>
+    <!-- <div class="container">
+        <div class="Aulas">Aulas</div>
+        <div class="Frequencia">Frequência</div>
+        <div class="Aulas">Notas</div>
+        <div class="Aulas">Grade</div>
+    </div> -->
+    <div class="container">
+        <!-- Faixa Esquerda: Lista de Itens -->
+        <div class="list-container">
+            <div class="list-item" onclick="showDetails('item1')">
+                Nota: 8.0 - Frequência: 90%
+            </div>
+            <div class="list-item" onclick="showDetails('item2')">
+                Nota: 7.5 - Frequência: 85%
+            </div>
+            <div class="list-item" onclick="showDetails('item3')">
+                Nota: 9.0 - Frequência: 95%
+            </div>
+        </div>
+
+        <!-- Faixa Direita: Detalhes -->
+        <div class="details" id="item1">
+            <h2>Detalhes do Item 1</h2>
+            <p>Informações detalhadas sobre o aluno. Nota: 8.0, Frequência: 90%. Comentários: Bom desempenho geral.</p>
+        </div>
+
+        <div class="details" id="item2">
+            <h2>Detalhes do Item 2</h2>
+            <p>Informações detalhadas sobre o aluno. Nota: 7.5, Frequência: 85%. Comentários: Precisa melhorar a participação nas aulas.</p>
+        </div>
+
+        <div class="details" id="item3">
+            <h2>Detalhes do Item 3</h2>
+            <p>Informações detalhadas sobre o aluno. Nota: 9.0, Frequência: 95%. Comentários: Excelente desempenho e participação.</p>
+        </div>
+    </div>
+
+    <script>
+        // Função para mostrar os detalhes
+        function showDetails(itemId) {
+            // Esconde todos os detalhes
+            const details = document.querySelectorAll('.details');
+            details.forEach(detail => {
+                detail.classList.remove('active');
+            });
+
+            // Mostra o detalhe do item clicado
+            const activeDetail = document.getElementById(itemId);
+            if (activeDetail) {
+                activeDetail.classList.add('active');
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
