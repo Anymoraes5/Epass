@@ -1,49 +1,45 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.logo{
-    background-color: #0097b8;
-    height: 90px;
-}
-#imagem{
-    height: 63.5px;
-    width: 250px;
-    position: absolute;
-    top: 10px;
-}
-.container{
-    display: grid; /* Ativa o modelo grid */
-    grid-template-columns: repeat(1fr, 2fr); /* Cria 2 colunas esquerda mais estreita e outra mais larga */
-    gap: 20px; /* Espaçamento entre os itens */
-    padding: 20px;
-
-}
-/* Estilo da lista na faixa esquerda */
-.list-container {
-    border-right: 2px solid #ccc;
+.header {
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura da página */
+    height: 100px; /* Altura do cabeçalho */
+    background-color: #0097b8; /* Cor de fundo do cabeçalho */
+    color: white;
+    padding: 0; /* Espaçamento interno */
+    display: flex; /* Usando flexbox */
+    align-items: center; /* Alinha verticalmente no centro */
+    justify-content: space-between; /* Alinha o conteúdo da esquerda para a direita */
+    font-size: 22px;
+    font-family: belleza;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
-.list-item {
-    padding: 10px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    transition: background-color 0.3s;
+#logo {
+    width: 100px;
+    height: 100px;
 }
 
-.list-item:hover {
-    background-color: #f0f0f0;
+nav {
+    display: flex; /* Torna os links do cabeçalho flexíveis */
 }
 
-/* Estilo da área de detalhes na faixa direita */
-.details {
-    padding: 20px;
-    border: 1px solid #ccc;
-    display: none; /* Inicialmente oculto */
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    transition: background-color 0.3s, color 0.3s; /* Animação para suavizar o efeito */
 }
 
-.details.active {
-    display: block; /* Exibe o conteúdo ao clicar */
+header a:hover {
+    color: #004858;
+}
+
+main {
+    margin-top: 80px; /* Espaço superior para que o conteúdo não fique escondido pelo cabeçalho */
+    padding: 1em;
+}
+
+#loginform{
+    background-color: #004858;
 }
